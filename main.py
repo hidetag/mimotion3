@@ -142,10 +142,6 @@ def push_wx(sckey, desp=""):
             print(f"[{now}] 推送失败：{json_data['errno']}({json_data['errmsg']})")
 
 if __name__ ==  "__main__":
-    print('nowHour:' + str(nowHour))
-    if nowHour != 11 and nowHour != 17 and  nowHour != 19:
-        print('未到执行时间')
-        sys.exit(0)
 # ServerChan
     sckey = input()
     if str(sckey) == '0':
