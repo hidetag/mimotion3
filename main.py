@@ -4,7 +4,6 @@
 import requests,time,re,json,random,sys
 
 now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-nowHour = time.localtime().tm_hour + 8
 
 headers = {
         'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 9; MI 6 MIUI/20.6.18)'
@@ -156,19 +155,7 @@ if __name__ ==  "__main__":
     # 登录密码
     passwd = input()
     # 要修改的步数，直接输入想要修改的步数值，留空为随机步数
-
-    if nowHour == 11:
-        step = '10000-12000'
-        print('1')
-    elif nowHour == 17:
-        step = '15000-17000'
-        print('2')
-    elif nowHour == 19:
-        step = '20000-22000'
-        print('3')
-    else:
-        step = input()
-        print('4')
+    step = input()
     print('step:' + step)
     user_list = user.split('#')
     passwd_list = passwd.split('#')
